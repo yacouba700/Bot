@@ -39,7 +39,7 @@ const scrapeLogic = async (res) => {
     // Print the full title
     //const logStatement = `The title of this blog post is ${fullTitle}`;
     //console.log(logStatement);
-    const content = `<h1> bonjour</ha>`;
+    const content = `<h1> bonjour</h1>`;
     page.setContent(content)
     const pdfs = await page.pdf({
       path: "result.pdf",
