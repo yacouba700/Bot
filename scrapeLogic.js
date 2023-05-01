@@ -47,7 +47,7 @@ const scrapeLogic = async (res) => {
       printBackground: true,
       format: "A4",
     });
-    res.sendFile(pdfs);
+    res.sendFile("result.pdf");
   } catch (e) {
     console.error(e);
     res.send(`Something went wrong while running Puppeteer: ${e}`);
