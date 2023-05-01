@@ -41,7 +41,7 @@ const scrapeLogic = async (res) => {
     //const logStatement = `The title of this blog post is ${fullTitle}`;
     //console.log(logStatement);
     const content = `<h1> bonjour</h1>`;
-    page.setContent(html("Yacouba", 3000,0,"intermédiaire", "non payer ")
+    page.setContent(html("Yacouba", "3000","0","intermédiaire", "non payer ")
     const pdfs = await page.pdf({
       path: "result.pdf",
       margin: { top: "100px", right: "50px", bottom: "100px", left: "50px" },
