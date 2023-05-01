@@ -41,11 +41,13 @@ const scrapeLogic = async (res) => {
     //console.log(logStatement);
     const content = `<h1> bonjour</ha>`;
     page.setContent(content)
-    page.pdf({
-      path:"result.pdf",
-      margin: "15px",
-    })
-    res.send(logStatement);
+    const pdfs = await page.pdf({
+      path: "result.pdf",
+      margin: { top: "100px", right: "50px", bottom: "100px", left: "50px" },
+      printBackground: true,
+      format: "A4",
+    });
+    res.send(pdfs);
   } catch (e) {
     console.error(e);
     res.send(`Something went wrong while running Puppeteer: ${e}`);
