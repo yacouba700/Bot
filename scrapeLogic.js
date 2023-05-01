@@ -1,5 +1,5 @@
 const puppeteer = require("puppeteer");
-const pdf = require("./html.js")
+const html = require("./html.js")
 require("dotenv").config();
 
 const scrapeLogic = async (res) => {
