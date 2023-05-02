@@ -1,12 +1,10 @@
 const express = require("express");
 const { scrapeLogic } = require("./scrapeLogic");
-const cors = require('cors');
 const app = express();
 var corsOptions = {
 origin: "https://devformation.vercel.app",
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
-app.use(cors())
 const PORT = process.env.PORT || 4000;
 
 app.get("/scrape", (req, res) => {
